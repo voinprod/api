@@ -24,14 +24,15 @@ module.exports = (app) => {
 
 
     //Работа с пользователем
-    app.get('/users', user.getAllUsers);
-    app.post('/users/create', user.createUser);
-    app.put('/users/update/:id', user.updateUser);
+    app.get('/users/:action', user.getAllUsers);
+    app.get('/users/:id', user.getOneUser);
+    app.post('/users/create',authGuard, user.createUser);
+    app.put('/users/update/:id', authGuard, user.updateUser);
     app.get('/users/city/:id', user.getCityInfo);
-    app.delete('/users/del/:id', user.deleteUser);
-    
+    app.delete('/users/del/:id',authGuard, user.deleteUser);
+    app.delete('/users/del',authGuard, user.deleteAllUsers);
     //Работа с городом
     app.get('/cities', city.getAllCity);
-    app.post('/cities/create', city.createCity);
+    app.post('/cities/create', authGuard, city.createCity);
 
 }
