@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -20,9 +22,11 @@
     "mongoose": "^5.3.13",
     "node-cron": "^2.0.3",
     "nodemon": "^1.18.7",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "snyk": "^1.189.0"
   },
   "engines": {
     "node": ">=9.0.0"
-  }
+  },
+  "snyk": true
 }
