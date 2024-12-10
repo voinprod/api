@@ -14,10 +14,10 @@
     "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
-    "express": "^4.16.4",
+    "express": "^4.21.2",
     "jsonwebtoken": "^8.4.0",
     "moment": "^2.22.2",
-    "mongoose": "^5.3.13",
+    "mongoose": "^8.8.3",
     "node-cron": "^2.0.3",
     "nodemon": "^1.18.7",
     "uuid": "^3.3.2"
